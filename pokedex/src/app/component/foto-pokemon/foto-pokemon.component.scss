@@ -1,0 +1,22 @@
+#container{
+    border: 4px solid #8cbbf1;
+    outline: 12px solid #262321;
+    max-width: 400px;
+    aspect-ratio: 1;
+    border-radius: 25px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #f5f7f9,
+        #f5f7f9 15px,
+        #c9e2f4 15px,
+        #c9e2f4 25px,
+    );
+
+    img{
+    margin-top: 20px;
+    margin-left: 80px;
+    width: 250px;   
+    height: 300px;
+    image-rendering: optimizeQuality;
+}
+}

@@ -1,0 +1,133 @@
+@use "../../../assets/styles/var.scss";
+#container{
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    
+}
+
+#datos{
+    border: 1.5px solid black;
+    height: 500px;
+    width: 90vw;
+    background-color: rgb(150, 137, 137);
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+    overflow: hidden;
+}
+  .area {
+
+      padding-left: 55vw;
+      padding-right: 10px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  .area:first-child {
+    flex-grow: 1;
+    background-color: #5e79c4;
+    background-image: linear-gradient(45deg, #c3c5c4 25%, transparent 25%, transparent 75%, #c3c5c4 75%, #c3c5c4),
+    linear-gradient(-45deg, #c3c5c4 25%, transparent 25%, transparent 75%, #c3c5c4 75%, #c3c5c4);
+    background-size: 20px 20px;
+    
+  }
+  .area:nth-child(2) {
+    background-color: #7ed4f6;
+    background-image: linear-gradient(45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8),
+    linear-gradient(-45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8);
+    background-size: 20px 20px;
+    flex-direction: column;
+    
+    p{
+        margin: 20px 10px;
+        width: 100%;
+    }
+  }
+  .area:last-child {
+    background: repeating-linear-gradient(
+      0deg,
+      #55648f,
+      #26af66 2px,
+      #3cca3c 2px,
+      #bfd678 4px,
+    );
+    p{
+        margin: 20px 10px;
+    }
+  }
+#descripcionContainer{
+    background-color: #55648f;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px ;
+    border-radius: 10px;
+    height: 90%;
+    width: 90%;
+
+
+    div{
+        background-color: #237147;
+        height: 90%;
+        margin: 5px;
+        margin-top: 10px;
+        
+        &first_child{
+            border-radius: 0 8px 8px 0;
+        }
+        &last_child{
+            border-radius: 8px 0px 0px 8px;
+        }
+    }
+}
+#tarjetaDetalle{
+    width: 90%;
+    background-color: #55648f;
+    border-radius: 25px;
+}
+.etiqueta{
+    display: inline-block;
+    background-color: #55648f;
+    border-radius: 5px;
+    color: var.$texto-blanco;
+    padding: 5px 20px;
+    font-size: x-large;
+    width: 100px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.tipo{
+    background-color: #858e92;
+    border-radius: 5px;
+    color: var.$texto-blanco;
+    padding: 5px 20px;
+    margin-left: 5px;
+}
+button{
+    background-color: #e4644496;
+    border-radius: 0 25px 25px 0;
+    border: unset;
+    cursor: pointer;
+    img{
+        height: 30px;
+        transition: 0.5s;
+        &.girar{
+            rotate: 180deg;
+        }
+        &:hover{
+            scale: 1.1;
+        }
+    }
+}
+#backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.379);
+    z-index: -1;
+    opacity: 1;
+    &.escondido{
+        pointer-events: none;
+        opacity: 0;
+    }
+}
